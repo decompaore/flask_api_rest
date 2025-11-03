@@ -1,10 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>FLASK WEB REST API</title>
 </head>
 <body>
-$END$
+<h2>HELLO WORLD AND WELCOME FOR FLASK WEB API TRAINING</h2>
+<ul>
+    {% for person in people %}
+    <li>{{ person.fname }}  {{ person.lname }}</li>
+    <ul>
+        {% for note in person.notes %}
+        <li>
+            {{ note.content }}
+        </li>
+        {% endfor %}
+    </ul>
+
+    {% endfor %}
+</ul>
 </body>
 </html>
